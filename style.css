@@ -643,14 +643,17 @@ header{
     margin-top: 2rem;
 }
 
-.location-info{
+.location-info, .map-container{
     background: var(--white);
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
     border-left: 5px solid var(--green);
+    overflow: hidden;
 }
-
+.map-container{
+    padding: 0;
+}
 .location-info h3{
     color: var(--dark-green);
     font-size: 1.8rem;
@@ -662,12 +665,6 @@ header{
     line-height: 1.8;
     margin-bottom: 1rem;
     font-size: 1.05rem;
-}
-
-.map-container{
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
 }
 
 .map-placeholder{
@@ -682,6 +679,13 @@ header{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+.map{
+    background: linear-gradient(135deg, var(--green) 0%, var(--saffron) 100%);
+    min-height: 300px;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
 }
 
 .map-placeholder span{
