@@ -523,11 +523,197 @@ header{
     margin-right: auto;
 }
 
+.admin-subtitle{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    margin: 3rem 0 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--saffron);
+}
+
+/* Mukhiya Section */
+.mukhiya-section{
+    margin: 3rem 0;
+}
+
+.mukhiya-card{
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--green);
+    border-top: 5px solid var(--saffron);
+}
+
+.mukhiya-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Village Level Administration Section */
+.village-admin-section{
+    margin: 3rem 0;
+}
+
+.village-admin-description{
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.village-admin-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.village-member-card{
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.village-member-card:hover{
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Admin Member Images */
+.admin-member-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--saffron);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--light-saffron) 100%);
+    flex-shrink: 0;
+}
+
+.mukhiya-card .admin-member-image{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0;
+}
+
+.village-member-card .admin-member-image{
+    width: 180px;
+    height: 180px;
+    border-width: 5px;
+    border-color: var(--green);
+    margin-bottom: 1.5rem;
+}
+
+.admin-member-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.admin-member-card:hover .admin-member-image img,
+.mukhiya-card:hover .admin-member-image img,
+.village-member-card:hover .admin-member-image img{
+    transform: scale(1.1);
+}
+
+/* Admin Member Info */
+.admin-member-info{
+    flex: 1;
+    text-align: left;
+}
+
+.mukhiya-card .admin-member-info{
+    text-align: left;
+}
+
+.village-member-card .admin-member-info{
+    text-align: center;
+    width: 100%;
+}
+
+.admin-member-info h4{
+    color: var(--dark-green);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.village-member-card .admin-member-info h4{
+    font-size: 1.4rem;
+}
+
+.admin-role{
+    color: var(--saffron);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.village-member-card .admin-role{
+    font-size: 1.05rem;
+}
+
+.admin-ward{
+    color: var(--green);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.admin-description{
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.admin-contact{
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.admin-contact strong{
+    color: var(--dark-green);
+}
+
+/* Admin Info Section */
+.admin-info-section{
+    margin-top: 3rem;
+}
+
 .admin-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .admin-card{
@@ -553,6 +739,7 @@ header{
 .admin-card p{
     color: var(--text-light);
     line-height: 1.6;
+    text-align: left;
 }
 
 /* Gallery Section */
@@ -1186,6 +1373,24 @@ header{
     .festivals-grid{
         grid-template-columns: 1fr;
     }
+
+    .mukhiya-card{
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .mukhiya-card .admin-member-info{
+        text-align: center;
+    }
+
+    .village-admin-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .admin-subtitle{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px){
@@ -1204,5 +1409,50 @@ header{
 
     .section{
         padding: 3rem 1rem;
+    }
+
+    .mukhiya-card{
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .mukhiya-card .admin-member-image{
+        width: 150px;
+        height: 150px;
+    }
+
+    .village-member-card .admin-member-image{
+        width: 150px;
+        height: 150px;
+    }
+
+    .admin-member-info h4{
+        font-size: 1.2rem;
+    }
+
+    .mukhiya-card .admin-member-info h4{
+        font-size: 1.3rem;
+    }
+
+    .village-member-card .admin-member-info h4{
+        font-size: 1.2rem;
+    }
+
+    .admin-subtitle{
+        font-size: 1.3rem;
+        margin: 2rem 0 1.5rem;
+    }
+
+    .village-member-card{
+        padding: 1.5rem;
+    }
+
+    .village-admin-description{
+        font-size: 1rem;
+    }
+
+    .village-admin-grid{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
